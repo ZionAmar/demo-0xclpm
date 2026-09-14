@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <title>בינה מלאכותית וסוכני AI · דמו חי</title>
+  <meta name="description" content="דמו אינטראקטיבי: מה זו בינה מלאכותית, מה זה סוכן AI, ואיך לולאת התכנון-פעולה-תצפית עובדת בפועל." />
+  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-glow" aria-hidden="true"></div>
+
+  <header class="topbar">
+    <div class="brand">
+      <span class="brand-mark">✦</span>
+      <span class="brand-name">AZToDev</span>
+      <span class="brand-tag">AI Lab</span>
+    </div>
+    <nav class="topnav">
+      <a href="#agent-loop">איך זה עובד</a>
+      <a href="#demo">דמו חי</a>
+      <a href="#usecases">שימושים</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <span class="pill">נושא היום · בינה מלאכותית וסוכנים</span>
+      <h1>מצ'אטבוט שעונה — <span class="accent">לסוכן AI שפועל בשבילך</span></h1>
+      <p class="lede">
+        בינה מלאכותית (AI) יודעת "לענות". סוכן AI (AI Agent) יודע גם <strong>לתכנן, לפעול, לבדוק תוצאה ולתקן את עצמו</strong> —
+        עד שהמשימה שלכם מסתיימת בפועל, לא רק במשפט תשובה.
+      </p>
+      <div class="hero-actions">
+        <a href="#demo" class="btn btn-primary">נסו את הדמו האינטראקטיבי ↓</a>
+        <a href="#agent-loop" class="btn btn-ghost">איך הלולאה עובדת</a>
+      </div>
+      <div class="hero-stats" role="group" aria-label="מספרים מהירים">
+        <div class="stat"><span class="stat-num">1</span><span class="stat-label">שאלה של המשתמש</span></div>
+        <div class="stat"><span class="stat-num">∞</span><span class="stat-label">לולאות תכנון-פעולה</span></div>
+        <div class="stat"><span class="stat-num">0</span><span class="stat-label">התערבות ידנית באמצע</span></div>
+      </div>
+    </section>
+
+    <section class="compare" id="compare">
+      <div class="section-head">
+        <h2>מה ההבדל, בעצם?</h2>
+        <p>שני מונחים שמתבלבלים ביניהם המון — הנה ההבדל בפועל.</p>
+      </div>
+      <div class="cards">
+        <article class="card">
+          <div class="card-icon">💬</div>
+          <h3>בינה מלאכותית / צ'אטבוט</h3>
+          <p>מקבלת שאלה, מחזירה תשובת טקסט. לא פותחת אפליקציות, לא מזמינה כלום, לא בודקת אם התשובה שלה נכונה בפועל.</p>
+          <ul class="tags">
+            <li>שאלה ← תשובה</li>
+            <li>ללא זיכרון פעולה</li>
+            <li>ללא כלים חיצוניים</li>
+          </ul>
+        </article>
+        <article class="card card-highlight">
+          <div class="card-icon">🤖</div>
+          <h3>סוכן AI (AI Agent)</h3>
+          <p>מקבלת <em>מטרה</em>, מפרקת אותה למשימות, משתמשת בכלים (חיפוש, קוד, API, קבצים), בודקת את התוצאה — וממשיכה עד שהמטרה הושגה.</p>
+          <ul class="tags">
+            <li>מטרה ← תוכנית ← ביצוע</li>
+            <li>שימוש בכלים</li>
+            <li>בדיקה עצמית + תיקון</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="agent-loop" id="agent-loop">
+      <div class="section-head">
+        <h2>לולאת הסוכן: Plan → Act → Observe → Repeat</h2>
+        <p>זו הלולאה שרצה מתחת למכסה המכונה בכל סוכן AI אמיתי — כולל זה שבנה את הדמו הזה.</p>
+      </div>
+      <ol class="loop-steps">
+        <li class="loop-step">
+          <div class="loop-num">1</div>
+          <h3>תכנון (Plan)</h3>
+          <p>הסוכן מפרק את המטרה הכללית לרשימת צעדים קונקרטיים וברי-ביצוע.</p>
+        </li>
+        <li class="loop-step">
+          <div class="loop-num">2</div>
+          <h3>פעולה (Act)</h3>
+          <p>מבצע את הצעד הבא בעזרת כלי מתאים — קוד, חיפוש, קריאת קובץ, שליחת בקשה.</p>
+        </li>
+        <li class="loop-step">
+          <div class="loop-num">3</div>
+          <h3>תצפית (Observe)</h3>
+          <p>בודק את התוצאה בפועל: הצליח? נכשל? יש מידע חדש שמשנה את התוכנית?</p>
+        </li>
+        <li class="loop-step">
+          <div class="loop-num">4</div>
+          <h3>חזרה (Repeat)</h3>
+          <p>מעדכן את התוכנית לפי מה שנצפה, וממשיך ללולאה הבאה — עד שהמטרה הושלמה.</p>
+        </li>
+      </ol>
+    </section>
+
+    <section class="demo" id="demo">
+      <div class="section-head">
+        <h2>דמו חי: תנו לסוכן משימה</h2>
+        <p>זה סימולציה קליינט-סייד בלבד (בלי שרת, בלי API אמיתי) — רק כדי להראות איך לולאת הסוכן <em>מרגישה</em> מבחוץ.</p>
+      </div>
+
+      <div class="demo-panel">
+        <div class="chip-row" role="group" aria-label="דוגמאות מהירות">
+          <button class="chip" data-goal="להזמין לי פיצה גדולה עם זיתים למשלוח">🍕 תזמינו לי פיצה</button>
+          <button class="chip" data-goal="לבדוק את מזג האוויר למחר ולהמליץ מה ללבוש">🌤️ בדקו מזג אוויר</button>
+          <button class="chip" data-goal="לקבוע לי פגישת עבודה ביום שלישי בשעה 10 ולשלוח הזמנה">📅 קבעו פגישה</button>
+          <button class="chip" data-goal="לכתוב ולפרסם דמו סטטי חדש בנושא בינה מלאכותית">🚀 בנו דמו חדש</button>
+        </div>
+
+        <form id="agent-form" class="agent-form" autocomplete="off">
+          <label for="goal-input" class="visually-hidden">מה תרצו שהסוכן יעשה בשבילכם?</label>
+          <input
+            id="goal-input"
+            name="goal"
+            type="text"
+            placeholder="מה תרצו שהסוכן יעשה בשבילכם? למשל: תזמינו לי פיצה…"
+            maxlength="140"
+            required
+          />
+          <button type="submit" class="btn btn-primary" id="run-btn">
+            <span class="btn-label">הפעילו את הסוכן</span>
+          </button>
+        </form>
+
+        <div id="agent-console" class="agent-console" aria-live="polite">
+          <p class="console-placeholder">כתבו משימה או בחרו דוגמה למעלה, ולחצו "הפעילו את הסוכן" — תראו כאן את לולאת התכנון-פעולה-תצפית בזמן אמת.</p>
+        </div>
+      </div>
+    </section>
+
+    <section class="usecases" id="usecases">
+      <div class="section-head">
+        <h2>איפה סוכני AI כבר עובדים היום</h2>
+        <p>לא מדע בדיוני — כלים שכל צוות מוצר יכול להרכיב כבר עכשיו.</p>
+      </div>
+      <div class="usecase-grid">
+        <article class="usecase">
+          <div class="usecase-icon">🧑‍💻</div>
+          <h3>סוכן קוד</h3>
+          <p>קורא קוד קיים, מתכנן שינוי, כותב, מריץ בדיקות, ומתקן את עצמו לפי תוצאות ריצה אמיתיות.</p>
+        </article>
+        <article class="usecase">
+          <div class="usecase-icon">🎧</div>
+          <h3>סוכן שירות לקוחות</h3>
+          <p>קורא פנייה, בודק היסטוריית הזמנה, פותח קריאת שירות, ועוקב עד לפתרון בפועל — לא רק תשובה גנרית.</p>
+        </article>
+        <article class="usecase">
+          <div class="usecase-icon">🔎</div>
+          <h3>סוכן מחקר</h3>
+          <p>מפרק שאלה מורכבת, מחפש במקורות שונים, משווה ממצאים, ומחזיר סיכום עם הפניות אמיתיות.</p>
+        </article>
+        <article class="usecase">
+          <div class="usecase-icon">🗂️</div>
+          <h3>סוכן תפעול (Ops)</h3>
+          <p>מנטר משימות, מזהה חוסם, מעדכן סטטוס בלוח עבודה, ומעביר את הבעלות לבעל התפקיד הנכון הבא.</p>
+        </article>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-brand">EaseToDev</div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
